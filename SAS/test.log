@@ -1,0 +1,853 @@
+1                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M4) 
+      Licensed to TRUVEN HEALTH ANALYTICS INC, Site 70013556.
+NOTE: This session is executing on the AIX 7.1 (AIX 64) platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.2
+
+NOTE: Additional host information:
+
+IBM AIX AIX 64 1 7 00FA44E14C00 
+
+NOTE: SAS initialization used:
+      real time           0.12 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is /opt/SAS94/SASFoundation/9.4/autoexec.sas.
+
+NOTE: Libref ARCH1990 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1990
+NOTE: Libref ARCH1991 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1991
+NOTE: Libref ARCH1992 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1992
+NOTE: Libref ARCH1993 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1993
+NOTE: Libref ARCH1994 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1994
+NOTE: Libref ARCH1995 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1995
+NOTE: Libref ARCH1996 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1996
+NOTE: Libref ARCH1997 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1997
+NOTE: Libref ARCH1998 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1998
+NOTE: Libref ARCH1999 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1999
+NOTE: Libref ARCH2000 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2000
+NOTE: Libref ARCH2001 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2001
+2                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+NOTE: Libref ARCH2002 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2002
+NOTE: Libref ARCH2003 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2003
+NOTE: Libref ARCH2004 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2004
+NOTE: Libref ARCH2005 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2005
+NOTE: Libref ARCH2006 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2006
+NOTE: Libref ARCH2007 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2007
+NOTE: Libref ARCH2008 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2008
+NOTE: Libref ARCH2009 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2009
+NOTE: Libref ARCH2010 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2010
+NOTE: Libref ARCH2011 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2011
+NOTE: Libref ARCH2012 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2012
+NOTE: Libref ARCH2013 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2013
+NOTE: Libref ARCH2014 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2014
+NOTE: Libref ARCH2015 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2015
+NOTE: Libref ARCH2016 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2016
+NOTE: Libref ARCH2017 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2017
+NOTE: Libref MEG1996 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1996/meg
+NOTE: Libref MEG1997 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1997/meg
+NOTE: Libref MEG1998 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1998/meg
+NOTE: Libref MEG1999 was successfully assigned as follows: 
+3                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/1999/meg
+NOTE: Libref MEG2000 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2000/meg
+NOTE: Libref MEG2001 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2001/meg
+NOTE: Libref MEG2002 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2002/meg
+NOTE: Libref MEG2003 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2003/meg
+NOTE: Libref MEG2004 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2004/meg
+NOTE: Libref MEG2005 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2005/meg
+NOTE: Libref MEG2006 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2006/meg
+NOTE: Libref MEG2007 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2007/meg
+NOTE: Libref MEG2008 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2008/meg
+NOTE: Libref MEG2009 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2009/meg
+NOTE: Libref MEG2010 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2010/meg
+NOTE: Libref MEG2011 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2011/meg
+NOTE: Libref MEG2012 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/2012/meg
+NOTE: Libref MEG2013 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2013/meg
+NOTE: Libref MEG2014 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2014/meg
+NOTE: Libref MEG2015 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2015/meg
+NOTE: Libref MEG2016 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2016/meg
+NOTE: Libref MEG2017 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/archive/2017/meg
+NOTE: Libref MDCD1999 was successfully assigned as follows: 
+      Engine:        V9 
+4                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+      Physical Name: /mscan/data/medicaid/1999
+NOTE: Libref MDCD2000 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2000
+NOTE: Libref MDCD2001 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2001
+NOTE: Libref MDCD2002 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2002
+NOTE: Libref MDCD2003 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2003
+NOTE: Libref MDCD2004 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2004
+NOTE: Libref MDCD2005 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2005
+NOTE: Libref MDCD2006 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2006
+NOTE: Libref MDCD2007 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2007
+NOTE: Libref MDCD2008 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2008
+NOTE: Libref MDCD2009 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2009
+NOTE: Libref MDCD2010 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2010
+NOTE: Libref MDCD2011 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2011
+NOTE: Libref MDCD2012 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2012
+NOTE: Libref MDCD2013 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2013
+NOTE: Libref MDCD2014 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2014
+NOTE: Libref MDCD2015 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2015
+NOTE: Libref MDCD2016 was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/2016
+NOTE: Libref EVIEW was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/earlyview
+NOTE: Libref EVIEWMON was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan2/data/earlyview_monthly
+5                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+NOTE: Libref MSLAB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/lab
+NOTE: Libref MSN1 was successfully assigned as follows: 
+      Levels:           1
+      Engine(1):        V9 
+      Physical Name(1): /msn1/data/marketscan_one
+NOTE: Libref MSPROV was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/marketscan_provider
+NOTE: Libref REDBOOK was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/redbook
+NOTE: Libref BPD was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/archive/bpd
+NOTE: Libref LOINCDB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/loincdb
+NOTE: Libref LIBRARY was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /hic/data/formats
+NOTE: Libref MDCDFMT was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/formats
+NOTE: Libref MDCDPROC was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /mscan/data/medicaid/procedures
+
+NOTE: AUTOEXEC processing completed.
+
+1          libname temp "/rpscan/u071439/MarketScan_exploration_project/";
+NOTE: Libref TEMP was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /rpscan/u071439/MarketScan_exploration_project
+2          
+3          /*
+4          proc sql;
+5          create table temp.trash1 as select
+6          DXCAT,
+7          CLIENT,
+8          ENROLID,
+9          INDSTRY,
+10         PAY,
+11         NETPAY
+12         from
+13         ARCH2006.ccaeO063
+14         where CLIENT in
+14       ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+14       ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+14       ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+15         
+16         proc export
+17         data = temp.trash1
+18         outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo063.csv"
+19         replace;
+20         run;
+21         
+6                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+22         
+23         proc sql;
+24         create table temp.trash2 as select
+25         DXCAT,
+26         CLIENT,
+27         ENROLID,
+28         INDSTRY,
+29         PAY,
+30         NETPAY
+31         from
+32         ARCH2007.ccaeO073
+33         where CLIENT in
+33       ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+33       ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+33       ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+34         
+35         proc export
+36         data = temp.trash2
+37         outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo073.csv"
+38         replace;
+39         run;
+40         
+41         
+42         
+43         proc sql;
+44         create table temp.trash3 as select
+45         DXCAT,
+46         CLIENT,
+47         ENROLID,
+48         INDSTRY,
+49         PAY,
+50         NETPAY
+51         from
+52         ARCH2008.ccaeO083
+53         where CLIENT in
+53       ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+53       ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+53       ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+54         
+55         proc export
+56         data = temp.trash3
+57         outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo083.csv"
+58         replace;
+59         run;
+60         
+61         
+62         proc sql;
+63         create table temp.trash4 as select
+64         DXCAT,
+65         CLIENT,
+66         ENROLID,
+67         INDSTRY,
+68         PAY,
+69         NETPAY
+70         from
+71         ARCH2009.ccaeO093
+72         where CLIENT in
+72       ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+7                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+72       ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+72       ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+73         
+74         
+75         proc export
+76         data = temp.trash4
+77         outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo093.csv"
+78         replace;
+79         run;
+80         
+81         
+82         
+83         proc sql;
+84         create table temp.trash5 as select
+85         DXCAT,
+86         CLIENT,
+87         ENROLID,
+88         INDSTRY,
+89         PAY,
+90         NETPAY
+91         from
+92         ARCH2010.ccaeO103
+93         where CLIENT in
+93       ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+93       ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+93       ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+94         
+95         proc export
+96         data = temp.trash5
+97         outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo103.csv"
+98         replace;
+99         run;
+100        
+101        
+102        proc sql;
+103        create table temp.trash6 as select
+104        DXCAT,
+105        CLIENT,
+106        ENROLID,
+107        INDSTRY,
+108        PAY,
+109        NETPAY
+110        from
+111        ARCH2011.ccaeO113
+112        where CLIENT in
+112      ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+112      ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+112      ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+113        
+114        proc export
+115        data = temp.trash6
+116        outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo113.csv"
+117        replace;
+118        run;
+119        */
+120        
+121        proc sql;
+122        create table temp.trash7 as select
+8                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+123        DXCAT,
+124        CLIENT,
+125        ENROLID,
+126        INDSTRY,
+127        PAY,
+128        NETPAY
+129        from
+130        ARCH2012.ccaeO123
+131        where CLIENT in
+131      ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+131      ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+131      ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+NOTE: Table TEMP.TRASH7 created, with 317958510 rows and 6 columns.
+
+132        
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           15:26.01
+      cpu time            3:17.54
+      
+
+133        proc export
+134        data = temp.trash7
+135        outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo123.csv"
+136        replace;
+137        run;
+
+138         /**********************************************************************
+139         *   PRODUCT:   SAS
+140         *   VERSION:   9.4
+141         *   CREATOR:   External File Interface
+142         *   DATE:      30NOV17
+143         *   DESC:      Generated SAS Datastep Code
+144         *   TEMPLATE SOURCE:  (None Specified.)
+145         ***********************************************************************/
+146            data _null_;
+147            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+148            %let _EFIREC_ = 0;     /* clear export record count macro variable */
+149            file '/rpscan/u071439/MarketScan_exploration_project/ccaeo123.csv' delimiter=',' DSD DROPOVER lrecl=32767;
+150            if _n_ = 1 then        /* write column names or labels */
+151             do;
+152               put
+153                  "DXCAT"
+154               ','
+155                  "CLIENT"
+156               ','
+157                  "ENROLID"
+158               ','
+159                  "INDSTRY"
+160               ','
+161                  "PAY"
+162               ','
+163                  "NETPAY"
+164               ;
+165             end;
+166           set  TEMP.TRASH7   end=EFIEOD;
+167               format DXCAT $5. ;
+168               format CLIENT z3. ;
+169               format ENROLID best12. ;
+9                                                          The SAS System                          10:40 Thursday, November 30, 2017
+
+170               format INDSTRY $1. ;
+171               format PAY best12. ;
+172               format NETPAY best12. ;
+173             do;
+174               EFIOUT + 1;
+175               put DXCAT $ @;
+176               put CLIENT @;
+177               put ENROLID @;
+178               put INDSTRY $ @;
+179               put PAY @;
+180               put NETPAY ;
+181               ;
+182             end;
+183            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+184            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
+185            run;
+
+NOTE: The file '/rpscan/u071439/MarketScan_exploration_project/ccaeo123.csv' is:
+      Filename=/rpscan/u071439/MarketScan_exploration_project/ccaeo123.csv,
+      Owner Name=u071439,Group Name=devl,
+      Access Permission=-rw-rw-r--,
+      Last Modified=30Nov2017:10:55:34
+
+NOTE: 317958511 records were written to the file '/rpscan/u071439/MarketScan_exploration_project/ccaeo123.csv'.
+      The minimum record length was 10.
+      The maximum record length was 49.
+NOTE: There were 317958510 observations read from the data set TEMP.TRASH7.
+NOTE: DATA statement used (Total process time):
+      real time           7:34.47
+      cpu time            3:41.92
+      
+
+317958510 records created in /rpscan/u071439/MarketScan_exploration_project/ccaeo123.csv from TEMP.TRASH7.
+  
+  
+NOTE: "/rpscan/u071439/MarketScan_exploration_project/ccaeo123.csv" file was successfully created.
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           7:34.86
+      cpu time            3:41.96
+      
+
+186        
+187        
+188        proc sql;
+189        create table temp.trash8 as select
+190        DXCAT,
+191        CLIENT,
+192        ENROLID,
+193        INDSTRY,
+194        PAY,
+195        NETPAY
+196        from
+197        ARCH2013.ccaeO133
+198        where CLIENT in
+198      ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+198      ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+198      ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+NOTE: Table TEMP.TRASH8 created, with 313066254 rows and 6 columns.
+10                                                         The SAS System                          10:40 Thursday, November 30, 2017
+
+
+199        
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           14:08.57
+      cpu time            3:20.59
+      
+
+200        proc export
+201        data = temp.trash8
+202        outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo133.csv"
+203        replace;
+204        run;
+
+205         /**********************************************************************
+206         *   PRODUCT:   SAS
+207         *   VERSION:   9.4
+208         *   CREATOR:   External File Interface
+209         *   DATE:      30NOV17
+210         *   DESC:      Generated SAS Datastep Code
+211         *   TEMPLATE SOURCE:  (None Specified.)
+212         ***********************************************************************/
+213            data _null_;
+214            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+215            %let _EFIREC_ = 0;     /* clear export record count macro variable */
+216            file '/rpscan/u071439/MarketScan_exploration_project/ccaeo133.csv' delimiter=',' DSD DROPOVER lrecl=32767;
+217            if _n_ = 1 then        /* write column names or labels */
+218             do;
+219               put
+220                  "DXCAT"
+221               ','
+222                  "CLIENT"
+223               ','
+224                  "ENROLID"
+225               ','
+226                  "INDSTRY"
+227               ','
+228                  "PAY"
+229               ','
+230                  "NETPAY"
+231               ;
+232             end;
+233           set  TEMP.TRASH8   end=EFIEOD;
+234               format DXCAT $5. ;
+235               format CLIENT z3. ;
+236               format ENROLID best12. ;
+237               format INDSTRY $1. ;
+238               format PAY best12. ;
+239               format NETPAY best12. ;
+240             do;
+241               EFIOUT + 1;
+242               put DXCAT $ @;
+243               put CLIENT @;
+244               put ENROLID @;
+245               put INDSTRY $ @;
+246               put PAY @;
+247               put NETPAY ;
+248               ;
+249             end;
+11                                                         The SAS System                          10:40 Thursday, November 30, 2017
+
+250            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+251            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
+252            run;
+
+NOTE: The file '/rpscan/u071439/MarketScan_exploration_project/ccaeo133.csv' is:
+      Filename=/rpscan/u071439/MarketScan_exploration_project/ccaeo133.csv,
+      Owner Name=u071439,Group Name=devl,
+      Access Permission=-rw-rw-r--,
+      Last Modified=30Nov2017:11:17:17
+
+NOTE: 313066255 records were written to the file '/rpscan/u071439/MarketScan_exploration_project/ccaeo133.csv'.
+      The minimum record length was 11.
+      The maximum record length was 49.
+NOTE: There were 313066254 observations read from the data set TEMP.TRASH8.
+NOTE: DATA statement used (Total process time):
+      real time           7:35.43
+      cpu time            3:29.55
+      
+
+313066254 records created in /rpscan/u071439/MarketScan_exploration_project/ccaeo133.csv from TEMP.TRASH8.
+  
+  
+NOTE: "/rpscan/u071439/MarketScan_exploration_project/ccaeo133.csv" file was successfully created.
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           7:35.69
+      cpu time            3:29.56
+      
+
+253        
+254        
+255        proc sql;
+256        create table temp.trash9 as select
+257        DXCAT,
+258        CLIENT,
+259        ENROLID,
+260        INDSTRY,
+261        PAY,
+262        NETPAY
+263        from
+264        ARCH2014.ccaeO143
+265        where CLIENT in
+265      ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+265      ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+265      ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+NOTE: Table TEMP.TRASH9 created, with 319908209 rows and 6 columns.
+
+266        
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           12:38.22
+      cpu time            3:30.20
+      
+
+267        proc export
+268        data = temp.trash9
+269        outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo143.csv"
+270        replace;
+271        run;
+
+12                                                         The SAS System                          10:40 Thursday, November 30, 2017
+
+272         /**********************************************************************
+273         *   PRODUCT:   SAS
+274         *   VERSION:   9.4
+275         *   CREATOR:   External File Interface
+276         *   DATE:      30NOV17
+277         *   DESC:      Generated SAS Datastep Code
+278         *   TEMPLATE SOURCE:  (None Specified.)
+279         ***********************************************************************/
+280            data _null_;
+281            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+282            %let _EFIREC_ = 0;     /* clear export record count macro variable */
+283            file '/rpscan/u071439/MarketScan_exploration_project/ccaeo143.csv' delimiter=',' DSD DROPOVER lrecl=32767;
+284            if _n_ = 1 then        /* write column names or labels */
+285             do;
+286               put
+287                  "DXCAT"
+288               ','
+289                  "CLIENT"
+290               ','
+291                  "ENROLID"
+292               ','
+293                  "INDSTRY"
+294               ','
+295                  "PAY"
+296               ','
+297                  "NETPAY"
+298               ;
+299             end;
+300           set  TEMP.TRASH9   end=EFIEOD;
+301               format DXCAT $5. ;
+302               format CLIENT z3. ;
+303               format ENROLID best12. ;
+304               format INDSTRY $1. ;
+305               format PAY best12. ;
+306               format NETPAY best12. ;
+307             do;
+308               EFIOUT + 1;
+309               put DXCAT $ @;
+310               put CLIENT @;
+311               put ENROLID @;
+312               put INDSTRY $ @;
+313               put PAY @;
+314               put NETPAY ;
+315               ;
+316             end;
+317            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+318            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
+319            run;
+
+NOTE: The file '/rpscan/u071439/MarketScan_exploration_project/ccaeo143.csv' is:
+      Filename=/rpscan/u071439/MarketScan_exploration_project/ccaeo143.csv,
+      Owner Name=u071439,Group Name=devl,
+      Access Permission=-rw-rw-r--,
+      Last Modified=30Nov2017:11:37:31
+
+NOTE: 319908210 records were written to the file '/rpscan/u071439/MarketScan_exploration_project/ccaeo143.csv'.
+      The minimum record length was 10.
+      The maximum record length was 49.
+13                                                         The SAS System                          10:40 Thursday, November 30, 2017
+
+NOTE: There were 319908209 observations read from the data set TEMP.TRASH9.
+NOTE: DATA statement used (Total process time):
+      real time           6:57.08
+      cpu time            3:40.26
+      
+
+319908209 records created in /rpscan/u071439/MarketScan_exploration_project/ccaeo143.csv from TEMP.TRASH9.
+  
+  
+NOTE: "/rpscan/u071439/MarketScan_exploration_project/ccaeo143.csv" file was successfully created.
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           6:57.37
+      cpu time            3:40.28
+      
+
+320        
+321        
+322        proc sql;
+323        create table temp.trash10 as select
+324        DXCAT,
+325        CLIENT,
+326        ENROLID,
+327        INDSTRY,
+328        PAY,
+329        NETPAY
+330        from
+331        ARCH2015.ccaeO152
+332        where CLIENT in
+332      ! (127,135,174,247,250,262,268,309,333,406,408,409,412,427,428,434,444,450,451,454,462,464,471,472,473,474,477,478,479,480,
+332      ! 482,485,487,490,491,494,498,506,554,564,591,602,609,611,613,614,615,616,618,625,628,630,631,635,637,646,649,650,651,653,6
+332      ! 55,656,657,658,659,662,663,664,667,669,672,676,678,687,688,689,692,697,698,700,702,717,775,831);
+NOTE: Table TEMP.TRASH10 created, with 328247004 rows and 6 columns.
+
+333        
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           12:13.79
+      cpu time            3:26.03
+      
+
+334        proc export
+335        data = temp.trash10
+336        outfile="/rpscan/u071439/MarketScan_exploration_project/ccaeo152.csv"
+337        replace;
+338        run;
+
+339         /**********************************************************************
+340         *   PRODUCT:   SAS
+341         *   VERSION:   9.4
+342         *   CREATOR:   External File Interface
+343         *   DATE:      30NOV17
+344         *   DESC:      Generated SAS Datastep Code
+345         *   TEMPLATE SOURCE:  (None Specified.)
+346         ***********************************************************************/
+347            data _null_;
+348            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+349            %let _EFIREC_ = 0;     /* clear export record count macro variable */
+350            file '/rpscan/u071439/MarketScan_exploration_project/ccaeo152.csv' delimiter=',' DSD DROPOVER lrecl=32767;
+351            if _n_ = 1 then        /* write column names or labels */
+14                                                         The SAS System                          10:40 Thursday, November 30, 2017
+
+352             do;
+353               put
+354                  "DXCAT"
+355               ','
+356                  "CLIENT"
+357               ','
+358                  "ENROLID"
+359               ','
+360                  "INDSTRY"
+361               ','
+362                  "PAY"
+363               ','
+364                  "NETPAY"
+365               ;
+366             end;
+367           set  TEMP.TRASH10   end=EFIEOD;
+368               format DXCAT $5. ;
+369               format CLIENT z3. ;
+370               format ENROLID best12. ;
+371               format INDSTRY $1. ;
+372               format PAY best12. ;
+373               format NETPAY best12. ;
+374             do;
+375               EFIOUT + 1;
+376               put DXCAT $ @;
+377               put CLIENT @;
+378               put ENROLID @;
+379               put INDSTRY $ @;
+380               put PAY @;
+381               put NETPAY ;
+382               ;
+383             end;
+384            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+385            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
+386            run;
+
+NOTE: The file '/rpscan/u071439/MarketScan_exploration_project/ccaeo152.csv' is:
+      Filename=/rpscan/u071439/MarketScan_exploration_project/ccaeo152.csv,
+      Owner Name=u071439,Group Name=devl,
+      Access Permission=-rw-rw-r--,
+      Last Modified=30Nov2017:11:56:42
+
+NOTE: 328247005 records were written to the file '/rpscan/u071439/MarketScan_exploration_project/ccaeo152.csv'.
+      The minimum record length was 11.
+      The maximum record length was 49.
+NOTE: There were 328247004 observations read from the data set TEMP.TRASH10.
+NOTE: DATA statement used (Total process time):
+      real time           11:14.71
+      cpu time            4:00.26
+      
+
+328247004 records created in /rpscan/u071439/MarketScan_exploration_project/ccaeo152.csv from TEMP.TRASH10.
+  
+  
+NOTE: "/rpscan/u071439/MarketScan_exploration_project/ccaeo152.csv" file was successfully created.
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           11:15.11
+      cpu time            4:00.28
+15                                                         The SAS System                          10:40 Thursday, November 30, 2017
+
+      
+
+387        
+388        
+389        
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           1:27:49.89
+      cpu time            28:26.46
+      
